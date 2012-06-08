@@ -1,5 +1,7 @@
-generate 'model', 'country title:string tld:string cca2:string ccn3:string cca3:string alt_spellings:string'
-rake 'db:migrate'
+if yes? 'Would you like to add a migration for the Country model?'
+  generate 'model', 'country title:string tld:string cca2:string ccn3:string cca3:string alt_spellings:string'
+  rake 'db:migrate'
+end
 
 rakefile 'countries.rake' do
   %Q{# encoding: utf-8
@@ -273,4 +275,4 @@ end
 }
 end
 
-rake 'db:seed:countries'
+rake 'db:seed:countries' if yes? 'Would you like to launch the seed task?'

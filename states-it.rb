@@ -1,4 +1,4 @@
-if yes? 'Would you like to add a migration for the State model object creation?'
+if yes? 'Would you like to add a migration for the State model?'
   generate 'model', 'state code:string title:string region:string'
   rake 'db:migrate'
 end
