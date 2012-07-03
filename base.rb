@@ -159,7 +159,7 @@ say_recipe 'Foundation'
 # Application template recipe for the rails_apps_composer. Check for a newer version here:
 # https://github.com/RailsApps/rails_apps_composer/blob/master/recipes/foundation.rb
 
-gem 'zurb-foundation', '>= 2.2.1.2', :group => :assets
+gem 'zurb-foundation', '~> 2.2.1.2', :group => :assets
 
 after_bundler do
   generate "foundation:install"
